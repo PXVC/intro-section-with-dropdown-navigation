@@ -1,0 +1,117 @@
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Epilogue", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.black-bg {
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(0deg, 0%, 8%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+header {
+  padding: 2.6rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-mobile img {
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  background-color: hsl(0deg, 0%, 98%);
+  top: 0;
+  right: 0;
+  transform: translateX(150%);
+  width: 65vw;
+  height: 100vh;
+  font-size: 2rem;
+  padding-top: 5rem;
+  padding-left: 2.7rem;
+  padding-right: 2.7rem;
+  transition: transform 0.4s ease-out;
+}
+.menu.active {
+  transform: translateX(0);
+}
+.menu p {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  color: hsl(0deg, 0%, 41%);
+  text-transform: capitalize;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+.menu p:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.menu-item--expand.active {
+  color: hsl(0deg, 0%, 8%);
+}
+.menu-item--expand.active img {
+  transform: rotate(180deg);
+}
+.menu-item--expand.active + .dropdown {
+  max-height: var(--h);
+  margin: 0.5rem 3rem 3rem;
+}
+
+.dropdown {
+  margin: 0 3rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out, margin 0.3s;
+}
+.dropdown img {
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-right: 1.6rem;
+}
+
+.btn {
+  width: 90%;
+  height: 47px;
+  color: hsl(0deg, 0%, 41%);
+  background-color: hsl(0deg, 0%, 98%);
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  font-family: "Epilogue", sans-serif;
+  transition: color 0.2s ease, border 0.2s ease;
+}
+.btn:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.btn--bordered {
+  border: 2px solid hsl(0deg, 0%, 41%);
+  border-radius: 15px;
+}
+.btn--bordered:hover {
+  color: hsl(0deg, 0%, 8%);
+  border: 2px solid hsl(0deg, 0%, 8%);
+}/*# sourceMappingURL=style.css.map */

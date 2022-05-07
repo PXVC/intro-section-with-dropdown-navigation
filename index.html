@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>Frontend Mentor | Intro section with dropdown navigation</title>
+	</head>
+	<body>
+		<div class="black-bg" id="black-bg"></div>
+		<header>
+			<img src="images/logo.svg" alt="logo" />
+			<div class="menu-mobile">
+				<img src="images/icon-menu.svg" alt="hamburger" id="hamburger" />
+				<div class="menu" id="menu">
+					<div class="menu-wrapper">
+						<p
+							class="menu-item menu-item--expand"
+							onclick="this.classList.toggle('active')"
+						>
+							features
+							<img src="images/icon-arrow-down.svg" alt="arrow" />
+						</p>
+						<div class="dropdown" style="--h: 174px">
+							<p><img src="images/icon-todo.svg" alt="todo" />todo list</p>
+							<p>
+								<img src="images/icon-calendar.svg" alt="calendar" />calendar
+							</p>
+							<p>
+								<img src="images/icon-reminders.svg" alt="reminders" />reminders
+							</p>
+							<p>
+								<img src="images/icon-planning.svg" alt="planning" />planning
+							</p>
+						</div>
+						<p
+							class="menu-item menu-item--expand"
+							onclick="this.classList.toggle('active')"
+						>
+							Company
+							<img src="images/icon-arrow-down.svg" alt="arrow" />
+						</p>
+						<div class="dropdown" style="--h: 123px">
+							<p>history</p>
+							<p>our team</p>
+							<p>blog</p>
+						</div>
+						<p class="menu-item">careers</p>
+						<p class="menu-item">about</p>
+						<button class="btn btn-login">Login</button>
+						<button class="btn btn--bordered btn-register">Register</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		Make remote work Get your team in sync, no matter your location. Streamline
+		processes, create team rituals, and watch productivity soar. Learn more
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io/challenges" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a href="https://www.frontendmentor.io/profile/PXVC" target="_blank"
+				>PXVC</a
+			>.
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script>
+		<script src="app.js"></script>
+	</body>
+</html>

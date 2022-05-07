@@ -1,0 +1,116 @@
+.black-bg {
+	position: absolute;
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	background-color: $almost-black;
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+header {
+	padding: 2.6rem 1.8rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+.menu-mobile {
+	img {
+		position: relative;
+		z-index: 9;
+		cursor: pointer;
+	}
+}
+
+.menu {
+	display: flex;
+	position: absolute;
+	background-color: $almost-white;
+	top: 0;
+	right: 0;
+	transform: translateX(150%);
+	width: 65vw;
+	height: 100vh;
+	font-size: 2rem;
+	padding-top: 5rem;
+	padding-left: 2.7rem;
+	padding-right: 2.7rem;
+	transition: transform 0.4s ease-out;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	p {
+		display: flex;
+		align-items: center;
+		column-gap: 1.5rem;
+		color: $medium-gray;
+		text-transform: capitalize;
+		margin-top: 2rem;
+		cursor: pointer;
+
+		&:hover {
+			color: $almost-black;
+		}
+	}
+}
+
+.menu-item {
+	&--expand {
+		&.active {
+			color: $almost-black;
+
+			img {
+				transform: rotate(180deg);
+			}
+
+			+ .dropdown {
+				// display: block;
+				max-height: var(--h);
+				margin: 0.5rem 3rem 3rem;
+			}
+		}
+	}
+}
+
+.dropdown {
+	margin: 0 3rem;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.3s ease-out, margin 0.3s;
+
+	img {
+		width: 2.3rem;
+		height: 2.3rem;
+		margin-right: 1.6rem;
+	}
+}
+
+.btn {
+	width: 90%;
+	height: 47px;
+	color: $medium-gray;
+	background-color: $almost-white;
+	outline: none;
+	border: none;
+	font-size: 1.7rem;
+	font-family: "Epilogue", sans-serif;
+	transition: color 0.2s ease, border 0.2s ease;
+
+	&:hover {
+		color: $almost-black;
+	}
+
+	&--bordered {
+		border: 2px solid $medium-gray;
+		border-radius: 15px;
+
+		&:hover {
+			color: $almost-black;
+			border: 2px solid $almost-black;
+		}
+	}
+}
