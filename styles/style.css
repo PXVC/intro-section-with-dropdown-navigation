@@ -32,7 +32,7 @@ header {
   position: relative;
 }
 
-.menu-mobile img {
+.navbar img {
   position: relative;
   z-index: 9;
   cursor: pointer;
@@ -162,7 +162,8 @@ header {
 .sponsors {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
   margin-top: 5rem;
 }
 .sponsors img {
@@ -173,6 +174,102 @@ header {
   position: absolute;
   bottom: 0;
   left: 50%;
+  z-index: 0;
   transform: translateX(-50%);
   text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  header {
+    padding: 3.54rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .menu {
+    position: relative;
+    transform: none;
+    height: 100%;
+    padding: 0;
+  }
+  .menu p {
+    margin: 0;
+  }
+
+  .menu-wrapper {
+    display: flex;
+    -moz-column-gap: 4.5rem;
+         column-gap: 4.5rem;
+    align-items: center;
+  }
+
+  .menu-item-wrapper {
+    position: relative;
+  }
+
+  .menu-item--expand.active + .dropdown {
+    opacity: 1;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    margin: 0;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-height: -webkit-max-content;
+    max-height: -moz-max-content;
+    max-height: max-content;
+    position: absolute;
+    top: 230%;
+    right: 0;
+    margin: 0;
+    box-shadow: 0px 0px 22.3px rgba(105, 105, 105, 0.091), 0px 0px 61.7px rgba(105, 105, 105, 0.13), 0px 0px 148.6px rgba(105, 105, 105, 0.169), 0px 0px 493px rgba(105, 105, 105, 0.26);
+    padding: 2rem;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .intro__content {
+    width: 460px;
+    align-items: flex-start;
+    row-gap: 5rem;
+    margin: 0;
+  }
+  .intro__title {
+    font-size: 7rem;
+  }
+  .intro__description {
+    text-align: left;
+    line-height: 2.7rem;
+  }
+
+  .sponsors {
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  .sponsors img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .hero-img {
+    min-width: 466px;
+    height: 738px;
+    background: url("../images/image-hero-desktop.png") center/100% no-repeat;
+  }
 }/*# sourceMappingURL=style.css.map */

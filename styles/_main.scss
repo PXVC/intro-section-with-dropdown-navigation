@@ -16,7 +16,7 @@ header {
 	position: relative;
 }
 
-.menu-mobile {
+.navbar {
 	img {
 		position: relative;
 		z-index: 9;
@@ -169,7 +169,7 @@ header {
 .sponsors {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	column-gap: 2rem;
 	margin-top: 5rem;
 
 	img {
@@ -180,6 +180,7 @@ header {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
+	z-index: 0;
 	transform: translateX(-50%);
 	text-align: center;
 }
